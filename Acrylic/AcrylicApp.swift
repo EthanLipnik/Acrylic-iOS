@@ -11,7 +11,11 @@ import SwiftUI
 struct AcrylicApp: App {
     var body: some Scene {
         WindowGroup {
+#if os(tvOS)
+            ScreensaverView()
+#else
             ContentView()
+#endif
         }
     }
 }

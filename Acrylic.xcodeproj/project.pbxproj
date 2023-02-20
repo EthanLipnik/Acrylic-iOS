@@ -15,6 +15,8 @@
 		AAC8F3FF29A2DEBB00B31A6E /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8F3FE29A2DEBB00B31A6E /* Blur.swift */; };
 		AAC8F40329A30FA200B31A6E /* AcrylicShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8F40129A30FA200B31A6E /* AcrylicShortcuts.swift */; };
 		AAC8F40429A30FA200B31A6E /* GenerateMeshIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8F40229A30FA200B31A6E /* GenerateMeshIntent.swift */; };
+		AAC8F40629A315EC00B31A6E /* ScreensaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8F40529A315EC00B31A6E /* ScreensaverView.swift */; };
+		AAC8F40829A3186E00B31A6E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8F40729A3186E00B31A6E /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		AAC8F3FE29A2DEBB00B31A6E /* Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		AAC8F40129A30FA200B31A6E /* AcrylicShortcuts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcrylicShortcuts.swift; sourceTree = "<group>"; };
 		AAC8F40229A30FA200B31A6E /* GenerateMeshIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateMeshIntent.swift; sourceTree = "<group>"; };
+		AAC8F40529A315EC00B31A6E /* ScreensaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensaverView.swift; sourceTree = "<group>"; };
+		AAC8F40729A3186E00B31A6E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				AAC8F40029A30FA200B31A6E /* Intents */,
 				AA70558A29A2C2D2005D0AD6 /* AcrylicApp.swift */,
 				AA70558C29A2C2D2005D0AD6 /* ContentView.swift */,
+				AAC8F40729A3186E00B31A6E /* AboutView.swift */,
+				AAC8F40529A315EC00B31A6E /* ScreensaverView.swift */,
 				AAC8F3FE29A2DEBB00B31A6E /* Blur.swift */,
 				AA70558E29A2C2D3005D0AD6 /* Assets.xcassets */,
 				AA70559029A2C2D3005D0AD6 /* Preview Content */,
@@ -177,6 +183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC8F40629A315EC00B31A6E /* ScreensaverView.swift in Sources */,
+				AAC8F40829A3186E00B31A6E /* AboutView.swift in Sources */,
 				AAC8F3FF29A2DEBB00B31A6E /* Blur.swift in Sources */,
 				AA70558D29A2C2D2005D0AD6 /* ContentView.swift in Sources */,
 				AAC8F40429A30FA200B31A6E /* GenerateMeshIntent.swift in Sources */,
@@ -328,12 +336,12 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethanlipnik.Acrylic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Debug;
 		};
@@ -363,12 +371,12 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethanlipnik.Acrylic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Release;
 		};

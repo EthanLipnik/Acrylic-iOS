@@ -8,6 +8,7 @@
 import MeshKit
 import SwiftUI
 
+#if !os(tvOS)
 struct ContentView: View {
     private let locationRange: ClosedRange<Float> = -0.5 ... 0.5
 
@@ -21,6 +22,9 @@ struct ContentView: View {
     private var lastColors: MeshColorGrid?
     @State
     private var state: RenderState = .none
+
+    @State
+    private var isShowingAboutView: Bool = false
 
     enum RenderState {
         case none
@@ -175,6 +179,25 @@ struct ContentView: View {
             }
             .padding()
         }
+        .overlay(alignment: .topTrailing) {
+            Button {
+                isShowingAboutView.toggle()
+            } label: {
+                Image(systemName: "info")
+                    .font(.system(.headline, design: .rounded, weight: .bold))
+                    .frame(width: 25, height: 25)
+                    .padding()
+                    .background(
+                        Circle()
+                            .fill(.thinMaterial)
+                            .shadow(radius: 30, y: 8)
+                    )
+            }
+            .popover(isPresented: $isShowingAboutView) {
+                AboutView()
+            }
+            .padding()
+        }
     }
 
     func render(_ size: MeshSize = MeshSize(width: 4096, height: 4096)) {
@@ -201,3 +224,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+#endif
