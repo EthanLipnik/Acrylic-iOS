@@ -10,8 +10,21 @@ import MeshKit
 import SwiftUI
 
 struct ScreensaverView: View {
+    @State
+    private var colors: MeshColorGrid = MeshKit.generate(
+        palette: [.randomPalette()],
+        withRandomizedLocations: true
+    )
+
     var body: some View {
-        Mesh
+        Mesh(colors: colors, animatorConfiguration: .init(meshRandomizer: .withMeshColors(colors)))
+            .ignoresSafeArea()
+            .onTapGesture {
+                colors = MeshKit.generate(
+                    palette: [.randomPalette()],
+                    withRandomizedLocations: true
+                )
+            }
     }
 }
 

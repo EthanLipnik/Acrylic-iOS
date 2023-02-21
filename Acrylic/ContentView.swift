@@ -12,6 +12,9 @@ import SwiftUI
 struct ContentView: View {
     private let locationRange: ClosedRange<Float> = -0.5 ... 0.5
 
+    @AppStorage("selectedColorSpace")
+    private var colorSpace: String = CGColorSpace.sRGB as String
+
     @State
     private var colors: MeshColorGrid = MeshKit.generate(
         palette: [.randomPalette()],
@@ -34,15 +37,13 @@ struct ContentView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            Mesh(colors: colors)
+            Mesh(colors: colors, colorSpace: .init(name: CGColorSpace.linearSRGB))
                 .id(colors)
                 .transition(.blurWithoutScale.animation(.easeInOut))
                 .ignoresSafeArea()
-                .statusBarHidden()
                 .onChange(of: colors) { _ in
                     state = .none
                 }
-
             Menu {
                 Button {
                     let size = UIScreen.main.nativeBounds.size
@@ -198,6 +199,7 @@ struct ContentView: View {
             }
             .padding()
         }
+        .statusBarHidden()
     }
 
     func render(_ size: MeshSize = MeshSize(width: 4096, height: 4096)) {
@@ -207,6 +209,7 @@ struct ContentView: View {
                 let url = try await colors.export(
                     size: size,
                     subdivisions: 64,
+                    colorSpace: .init(name: colorSpace as CFString),
                     fileFormat: .png
                 )
 
