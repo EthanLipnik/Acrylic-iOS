@@ -146,6 +146,7 @@ struct AboutView: View {
                         HStack {
                             Text(name)
                                 .font(.headline)
+                                .fixedSize(horizontal: true, vertical: false)
                             Text("@" + username)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .foregroundStyle(.secondary)
