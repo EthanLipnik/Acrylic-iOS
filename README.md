@@ -1,3 +1,4 @@
+<img src="Icon.png" width="200">
 
 # Acrylic
 
