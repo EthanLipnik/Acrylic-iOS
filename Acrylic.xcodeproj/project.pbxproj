@@ -20,13 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA3BAE2F2A22D147009C047F /* MeshKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MeshKit; sourceTree = "<group>"; };
 		AA70558729A2C2D2005D0AD6 /* Acrylic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acrylic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA70558A29A2C2D2005D0AD6 /* AcrylicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrylicApp.swift; sourceTree = "<group>"; };
 		AA70558C29A2C2D2005D0AD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA70558E29A2C2D3005D0AD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA70559129A2C2D3005D0AD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AAC444B029A42AFC001E6C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		AAC8F3FA29A2C44A00B31A6E /* MeshKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MeshKit; path = ../MeshKit; sourceTree = "<group>"; };
 		AAC8F3FE29A2DEBB00B31A6E /* Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		AAC8F40129A30FA200B31A6E /* AcrylicShortcuts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcrylicShortcuts.swift; sourceTree = "<group>"; };
 		AAC8F40229A30FA200B31A6E /* GenerateMeshIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateMeshIntent.swift; sourceTree = "<group>"; };
@@ -46,10 +46,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA3BAE2E2A22D147009C047F /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				AA3BAE2F2A22D147009C047F /* MeshKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		AA70557E29A2C2D2005D0AD6 = {
 			isa = PBXGroup;
 			children = (
-				AAC8F3F929A2C44A00B31A6E /* Packages */,
+				AA3BAE2E2A22D147009C047F /* Packages */,
 				AA70558929A2C2D2005D0AD6 /* Acrylic */,
 				AA70558829A2C2D2005D0AD6 /* Products */,
 				AAC8F3FB29A2D0BB00B31A6E /* Frameworks */,
@@ -86,14 +94,6 @@
 				AA70559129A2C2D3005D0AD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AAC8F3F929A2C44A00B31A6E /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				AAC8F3FA29A2C44A00B31A6E /* MeshKit */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 		AAC8F3FB29A2D0BB00B31A6E /* Frameworks */ = {

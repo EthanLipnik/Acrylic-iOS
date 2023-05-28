@@ -82,9 +82,7 @@ struct AboutView: View {
                 userView(
                     "Ethan Lipnik",
                     username: "EthanLipnik",
-                    profilePic: URL(
-                        string: "https://www.ethanlipnik.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FProfilePic.4dd0e195.png&w=1080&q=75"
-                    ),
+                    profilePic: "Ethan",
                     body: "Developer and Designer"
                 )
 
@@ -93,7 +91,7 @@ struct AboutView: View {
                 userView(
                     "Nikita Patskov",
                     username: "NikitkaPa",
-                    profilePic: URL(string: "https://avatars.githubusercontent.com/u/17741730?v=4"),
+                    profilePic: "Nik",
                     body: "MeshGradient Library"
                 )
 
@@ -102,9 +100,7 @@ struct AboutView: View {
                 userView(
                     "Alexander Vilinskyy",
                     username: "vilinskyy",
-                    profilePic: URL(
-                        string: "https://pbs.twimg.com/profile_images/1615753830133600256/lBk-E9Rr_400x400.jpg"
-                    ),
+                    profilePic: "Alexander",
                     body: "Icon Designer"
                 )
             } label: {
@@ -116,7 +112,7 @@ struct AboutView: View {
         func userView(
             _ name: String,
             username: String,
-            profilePic: URL?,
+            profilePic: String,
             body: String
         ) -> some View {
             Button {
@@ -125,22 +121,11 @@ struct AboutView: View {
                 }
             } label: {
                 HStack {
-                    AsyncImage(url: profilePic) { phase in
-                        switch phase {
-                        case let .success(image):
-                            image
-                                .resizable()
-                        case .failure:
-                            Color.red
-                        case .empty:
-                            Color.secondary
-                        @unknown default:
-                            Color.secondary
-                        }
-                    }
-                    .aspectRatio(1 / 1, contentMode: .fit)
-                    .frame(height: 45)
-                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+                    Image("Credits/" + profilePic)
+                        .resizable()
+                        .aspectRatio(1 / 1, contentMode: .fit)
+                        .frame(height: 45)
+                        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
 
                     VStack(alignment: .leading) {
                         HStack {
